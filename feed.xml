@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" >
+	<generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator>
+	<link href="https://el1euw.github.io/feed.xml" rel="self" type="application/atom+xml" />
+	<updated>2025-01-23T20:56:49+01:00</updated>
+	<link href="https://el1euw.github.io" rel="alternate" type="text/html" />
+	<id>https://el1euw.github.io/feed.xml</id>
+	<title type="html">Solo Circuit</title>
+	<subtitle>Slowtech is a state of mind, not a lack of gadgets.</subtitle>
+	
+	<entry>
+		
+			<title>New hardware</title>
+		
+		
+			<link href="https://el1euw.github.io/posts/new-hardware.html" rel="alternate" type="text/html" title="New hardware"/>
+		
+		<content type="html" xml:base="">&lt;p&gt;I bricked too many Android phones in the past and have (re)installed too many Linux and Windows installations because of “Bricked by Tinkering”. No more of that.&lt;/p&gt;
+
+&lt;p&gt;For that, I opted some years ago to start using Apple products, first an iPhone and some time later a Macbook. I recently replaced this Macbook for a new model, an Air M3. And as expected, it’s a very boring machine to use and exact that gives me joy. It’s quiet, it’s performant, it doesn’t nag. Happy days.&lt;/p&gt;
+
+&lt;p&gt;Note-to-future-self: reconsider Midnight, it’s a fingerprint magnet.&lt;/p&gt;
+</content>
+		<published>2024-10-06T00:00:00+02:00</published>
+		<updated>2024-10-06T00:00:00+02:00</updated>
+		
+			<id>https://el1euw.github.io/posts/new-hardware.html</id>
+		
+		<author>
+			<name>Ewald</name>
+		</author>
+	</entry>
+	
+	<entry>
+		
+			<title>Plain Text</title>
+		
+		
+			<link href="https://el1euw.github.io/posts/plain-text.html" rel="alternate" type="text/html" title="Plain Text"/>
+		
+		<content type="html" xml:base="">&lt;p&gt;If I don’t write it down, I will forget about it. So, I use a notebook for my to-do list.&lt;/p&gt;
+
+&lt;p&gt;Todos go on the right page, random notes go on the left. It’s loosly based on bulletjournal and todo.txt but reduced to it’s core without much of a rulebook. It must work for me instinctively with enough flexibility to adapt to changing circumstances otherwise I spend too much of time designing and tweaking and not using it.&lt;/p&gt;
+
+&lt;p&gt;The idea is that notes and todos are temporarily stuff that needs a short term action. It doesn’t do project management and it doesn’t function as a documentation system.&lt;/p&gt;
+
+&lt;h2 id=&quot;todos&quot;&gt;Todos&lt;/h2&gt;
+&lt;p&gt;The list is a weekly list. When something is done, it’s crossed off the list. Items that remains open at the end of a week will be transferred to the next week until it got done. There is no priority marking, it’s a First In - First Out list. Except when reality decides otherwise.&lt;/p&gt;
+
+&lt;h2 id=&quot;notes&quot;&gt;Notes&lt;/h2&gt;
+&lt;p&gt;Notes are being processed as soon as possible, otherwise the specific context will fade from memory. And because my handwriting is unreadable without context, it’s a necessity to process those as soon as possible into more elaborate text, i.e. a wiki page or a project.&lt;/p&gt;
+
+</content>
+		<published>2024-08-20T00:00:00+02:00</published>
+		<updated>2024-08-20T00:00:00+02:00</updated>
+		
+			<id>https://el1euw.github.io/posts/plain-text.html</id>
+		
+		<author>
+			<name>Ewald</name>
+		</author>
+	</entry>
+	
+	<entry>
+		
+			<title>Intro</title>
+		
+		
+			<link href="https://el1euw.github.io/posts/intro.html" rel="alternate" type="text/html" title="Intro"/>
+		
+		<content type="html" xml:base="">&lt;p&gt;Welcome.
+This site has an intentional lack of visual pleasure.&lt;br /&gt;
+Well-written posts will be rare. Existing posts are very likely to be edited and/or deleted.&lt;/p&gt;
+</content>
+		<published>2024-08-19T00:00:00+02:00</published>
+		<updated>2024-08-19T00:00:00+02:00</updated>
+		
+			<id>https://el1euw.github.io/posts/intro.html</id>
+		
+		<author>
+			<name>Ewald</name>
+		</author>
+	</entry>
+	
+</feed>
