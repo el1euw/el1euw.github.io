@@ -2,11 +2,49 @@
 <feed xmlns="http://www.w3.org/2005/Atom" >
 	<generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator>
 	<link href="https://el1euw.github.io/feed.xml" rel="self" type="application/atom+xml" />
-	<updated>2025-01-23T20:56:49+01:00</updated>
+	<updated>2025-01-24T20:53:25+01:00</updated>
 	<link href="https://el1euw.github.io" rel="alternate" type="text/html" />
 	<id>https://el1euw.github.io/feed.xml</id>
 	<title type="html">Solo Circuit</title>
 	<subtitle>Slowtech is a state of mind, not a lack of gadgets.</subtitle>
+	
+	<entry>
+		
+			<title>Set theme</title>
+		
+		
+			<link href="https://el1euw.github.io/posts/set-theme.html" rel="alternate" type="text/html" title="Set theme"/>
+		
+		<content type="html" xml:base="">&lt;p&gt;One of the missing things on Windows is a automatic theme switcher, i.e. light to dark. Every other OS I know has it, usually based on sunrise and sunset. But not Windows. Although it is not necessary to use a theme if you only want to swith to dark or light, you do need a theme if you want a different wallpaper. I like a dark wallpaper in dark mode and a lighter one in light mode.&lt;/p&gt;
+
+&lt;p&gt;To scratch that itch (somewhat, it’s not perfect) this is a workaround:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create your themes and save them.&lt;/li&gt;
+  &lt;li&gt;Copy the .theme files to a more reliable location, Onedrive is a good option. I use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$env:Onedrive\Themes&lt;/code&gt; folder in this example.&lt;/li&gt;
+  &lt;li&gt;Create a powershell script:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$themeCurrent=(Get-ItemProperty registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes -Name CurrentTheme).CurrentTheme.Split(&quot;\&quot;)[-1]
+switch ($themeCurrent) {
+    &quot;DARK.theme&quot; { Start-Process -Wait -FilePath &quot;$env:onedrive\Themes\LIGHT.theme&quot; }
+    &quot;LIGHT.theme&quot; { Start-Process -Wait -FilePath &quot;$env:onedrive\Themes\DARK.theme&quot; }
+    Default {}
+}
+Stop-Process -Name &quot;systemsettings&quot; -Force -ErrorAction SilentlyContinue
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This script looks in the registry for the current active theme and then switches to the other one. Because the Settings app will be openend, this one has to be killed. Obviously, this script only works with 2 themes.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, use a parameter to switch to a specific theme. Had that, but prefered to have no interaction at runtime. The script example can also be used as a scheduled task to run on a event, time or whatever you want. I am a bit finnicky when it comes to dark/light, I switch based on ambient light, not time of day, Inpinned a shortcut to Start for that and run it manually. I might add a hotkey to the .lnk.&lt;/p&gt;
+</content>
+		<published>2025-01-24T00:00:00+01:00</published>
+		<updated>2025-01-24T00:00:00+01:00</updated>
+		
+			<id>https://el1euw.github.io/posts/set-theme.html</id>
+		
+		<author>
+			<name>Ewald</name>
+		</author>
+	</entry>
 	
 	<entry>
 		
