@@ -29,17 +29,17 @@
   <li>Create a powershell script:</li>
 </ul>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$themeCurrent=(Get-ItemProperty registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes -Name CurrentTheme).CurrentTheme.Split("\")[-1]
-switch ($themeCurrent) {
-    "DARK.theme" { Start-Process -Wait -FilePath "$env:onedrive\Themes\LIGHT.theme" }
-    "LIGHT.theme" { Start-Process -Wait -FilePath "$env:onedrive\Themes\DARK.theme" }
-    Default {}
-}
-Stop-Process -Name "systemsettings" -Force -ErrorAction SilentlyContinue
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nv">$themeCurrent</span><span class="o">=</span><span class="p">(</span><span class="n">Get-ItemProperty</span><span class="w"> </span><span class="nx">registry::HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">CurrentTheme</span><span class="p">)</span><span class="o">.</span><span class="nf">CurrentTheme</span><span class="o">.</span><span class="nf">Split</span><span class="p">(</span><span class="s2">"\"</span><span class="p">)[</span><span class="nt">-1</span><span class="p">]</span><span class="w">
+</span><span class="nx">switch</span><span class="w"> </span><span class="p">(</span><span class="nv">$themeCurrent</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"DARK.theme"</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Start-Process</span><span class="w"> </span><span class="nt">-Wait</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="s2">"</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">onedrive</span><span class="s2">\Themes\LIGHT.theme"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"LIGHT.theme"</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Start-Process</span><span class="w"> </span><span class="nt">-Wait</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="s2">"</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">onedrive</span><span class="s2">\Themes\DARK.theme"</span><span class="w"> </span><span class="p">}</span><span class="w">
+    </span><span class="n">Default</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">Stop-Process</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s2">"systemsettings"</span><span class="w"> </span><span class="nt">-Force</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">SilentlyContinue</span></code></pre></figure>
+
 <p>This script looks in the registry for the current active theme and then switches to the other one. Because the Settings app will be openend, this one has to be killed. Obviously, this script only works with 2 themes.</p>
 
-<p>Alternatively, use a parameter to switch to a specific theme. Had that, but prefered to have no interaction at runtime. The script example can also be used as a scheduled task to run on a event, time or whatever you want. I am a bit finnicky when it comes to dark/light, I switch based on ambient light, not time of day, Inpinned a shortcut to Start for that and run it manually. I might add a hotkey to the .lnk.</p>
+<p>Alternatively, use a parameter to switch to a specific theme. Had that, but prefered to have no interaction at runtime. The script example can also be used as a scheduled task to run on a event, time or whatever you want. I am a bit finnicky when it comes to dark/light, I switch based on ambient light, not time of day, I pinned a shortcut to Start for that and run it manually. I might add a hotkey to the .lnk.</p>
 
 <p class="muted small">First published on January 24, 2025</p><footer>
   <hr>
